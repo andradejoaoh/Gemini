@@ -1,0 +1,33 @@
+[{
+    "id" : "AAX143X",
+    "lote" : "32A",
+    "area" : 1,
+    "tipo" : "Bovino",
+    "raca" : "Nelore",
+    "sexo" : "Macho",
+    "bateria" : 80,
+    "latitude" : -25.3332,
+    "longitude" : -23.0000,
+    
+    "remedios" : [{
+        "dataMedicacao" : "21/11/2019",
+        "nomeMedicacao" : ["Brucelose","Raiva"]
+    },
+    {
+        "dataMedicacao" : "21/11/2019",
+        "nomeMedicacao" : ["Brucelose","Raiva"]
+    }],
+    
+    "registroDeAtividades" : [{
+        "dataAcontecimento" : "21/11/2019",
+        "acontecimentos" : ["Bebeu água", "Tomou vacina"]
+    },
+    {
+        "dataAcontecimento" : "22/11/2019",
+        "acontecimentos" : ["Tomou Remédio"]
+    },
+    {
+        "dataAcontecimento" : "23/11/2019",
+        "acontecimentos" : ["Bebeu água", "Trocou de pasto"]
+    }]
+}]
