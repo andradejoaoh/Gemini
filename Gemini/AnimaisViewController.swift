@@ -10,13 +10,16 @@ import UIKit
 
 class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var animaisTableView: UITableView!
+    
     var animais: [Animal] = []
+    var numeroArea: Int? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         animaisTableView.delegate = self
         animaisTableView.dataSource = self
         animaisTableView.rowHeight = 130
-        self.animais = JSONHandler.shared.animais
+        self.animais = JSONHandler.shared.animais.filter{ $0.area == numeroArea ?? 1 }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,7 +36,7 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "animalSegue", sender: self)
+        performSegue(withIdentifier: "atividadesSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

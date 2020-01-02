@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class AnimalCell: UITableViewCell {
+class AtividadesCell: UITableViewCell {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var acaoLabel: UILabel!
 }

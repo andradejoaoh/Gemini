@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		615BEC6823904968003668D5 /* EscanearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC6723904968003668D5 /* EscanearViewController.swift */; };
+		615BEC6823904968003668D5 /* AlertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC6723904968003668D5 /* AlertasViewController.swift */; };
 		615BEC6A2390598C003668D5 /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */; };
+		61682B7323B9CBD0004CCF2B /* AreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61682B7223B9CBD0004CCF2B /* AreaCell.swift */; };
 		61B5102423906D7C005BCB69 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B5102323906D7C005BCB69 /* MapaViewController.swift */; };
 		61B5102823906F7F005BCB69 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B5102723906F7F005BCB69 /* Animal.swift */; };
 		61B5102A239070AC005BCB69 /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B51029239070AC005BCB69 /* Registro.swift */; };
@@ -23,7 +24,7 @@
 		61C630DE238F01FB007A7B2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C630DC238F01FB007A7B2C /* Main.storyboard */; };
 		61C630E0238F01FF007A7B2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C630DF238F01FF007A7B2C /* Assets.xcassets */; };
 		61C630E3238F01FF007A7B2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61C630E1238F01FF007A7B2C /* LaunchScreen.storyboard */; };
-		61ECD5E42390C85D00F61C3C /* AnimalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ECD5E32390C85D00F61C3C /* AnimalCell.swift */; };
+		61ECD5E42390C85D00F61C3C /* AtividadesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ECD5E32390C85D00F61C3C /* AtividadesCell.swift */; };
 		61ECD5E723916E0800F61C3C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61ECD5E623916E0800F61C3C /* MapKit.framework */; };
 		61EDCF9B2396FCE700622CAA /* Remedio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EDCF9A2396FCE700622CAA /* Remedio.swift */; };
 		61EDCF9D2398233600622CAA /* PinMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EDCF9C2398233600622CAA /* PinMapa.swift */; };
@@ -32,8 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		615BEC6723904968003668D5 /* EscanearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscanearViewController.swift; sourceTree = "<group>"; };
+		615BEC6723904968003668D5 /* AlertasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertasViewController.swift; sourceTree = "<group>"; };
 		615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
+		61682B7223B9CBD0004CCF2B /* AreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCell.swift; sourceTree = "<group>"; usesTabs = 0; };
 		61B51022239069FA005BCB69 /* Gemini.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gemini.entitlements; sourceTree = "<group>"; };
 		61B5102323906D7C005BCB69 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		61B5102723906F7F005BCB69 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -51,7 +53,7 @@
 		61C630DF238F01FF007A7B2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61C630E2238F01FF007A7B2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61C630E4238F01FF007A7B2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61ECD5E32390C85D00F61C3C /* AnimalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCell.swift; sourceTree = "<group>"; };
+		61ECD5E32390C85D00F61C3C /* AtividadesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadesCell.swift; sourceTree = "<group>"; };
 		61ECD5E623916E0800F61C3C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		61EDCF9A2396FCE700622CAA /* Remedio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remedio.swift; sourceTree = "<group>"; };
 		61EDCF9C2398233600622CAA /* PinMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinMapa.swift; sourceTree = "<group>"; };
@@ -80,8 +82,9 @@
 				61EDCF9E23982E9000622CAA /* Fazenda.swift */,
 				61B51029239070AC005BCB69 /* Registro.swift */,
 				61EDCF9A2396FCE700622CAA /* Remedio.swift */,
-				61ECD5E32390C85D00F61C3C /* AnimalCell.swift */,
 				61B5103723907C75005BCB69 /* AnimaisCell.swift */,
+				61682B7223B9CBD0004CCF2B /* AreaCell.swift */,
+				61ECD5E32390C85D00F61C3C /* AtividadesCell.swift */,
 				61EDCF9C2398233600622CAA /* PinMapa.swift */,
 			);
 			path = Estruturas;
@@ -124,7 +127,7 @@
 				61B510352390782E005BCB69 /* AnimalViewController.swift */,
 				61B51031239077BE005BCB69 /* AreasViewController.swift */,
 				61B5102323906D7C005BCB69 /* MapaViewController.swift */,
-				615BEC6723904968003668D5 /* EscanearViewController.swift */,
+				615BEC6723904968003668D5 /* AlertasViewController.swift */,
 				615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */,
 				61C630DC238F01FB007A7B2C /* Main.storyboard */,
 				61C630E1238F01FF007A7B2C /* LaunchScreen.storyboard */,
@@ -221,8 +224,9 @@
 				61B5103823907C75005BCB69 /* AnimaisCell.swift in Sources */,
 				61B5102423906D7C005BCB69 /* MapaViewController.swift in Sources */,
 				61C630D5238F01FB007A7B2C /* AppDelegate.swift in Sources */,
+				61682B7323B9CBD0004CCF2B /* AreaCell.swift in Sources */,
 				61B5102D23907396005BCB69 /* JSONHandler.swift in Sources */,
-				61ECD5E42390C85D00F61C3C /* AnimalCell.swift in Sources */,
+				61ECD5E42390C85D00F61C3C /* AtividadesCell.swift in Sources */,
 				61EDCF9B2396FCE700622CAA /* Remedio.swift in Sources */,
 				61B5103423907817005BCB69 /* AnimaisViewController.swift in Sources */,
 				61B510362390782E005BCB69 /* AnimalViewController.swift in Sources */,
@@ -230,7 +234,7 @@
 				61B5102823906F7F005BCB69 /* Animal.swift in Sources */,
 				61EDCF9D2398233600622CAA /* PinMapa.swift in Sources */,
 				61C630D7238F01FB007A7B2C /* SceneDelegate.swift in Sources */,
-				615BEC6823904968003668D5 /* EscanearViewController.swift in Sources */,
+				615BEC6823904968003668D5 /* AlertasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

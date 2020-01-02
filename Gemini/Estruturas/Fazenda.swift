@@ -8,6 +8,8 @@
 
 import Foundation
 class Fazenda: Codable {
+    let usuario: String
+    let senha: String
     let nomeFazenda: String
     let qtdeAreas: Int
     let latitude: Double

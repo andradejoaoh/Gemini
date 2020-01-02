@@ -1,4 +1,6 @@
 {
+    "usuario" : "user",
+    "senha" : "pass",
     "nomeFazenda" : "Fazenda do Povo",
     "qtdeAreas" : 7,
     "latitude" : -29.500,

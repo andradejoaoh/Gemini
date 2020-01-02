@@ -39,7 +39,7 @@ class AnimalViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: AnimalCell = self.atividadesTableView.dequeueReusableCell(withIdentifier: "AnimalCell") as! AnimalCell
+        let cell: AtividadesCell = self.atividadesTableView.dequeueReusableCell(withIdentifier: "AtividadesCell") as! AtividadesCell
         guard let animal = animal else {return cell}
         cell.dataLabel.text = animal.registroDeAtividades[indexPath.row].dataAcontecimento
         cell.acaoLabel.text = animal.registroDeAtividades[indexPath.row].acontecimentos[0] 
