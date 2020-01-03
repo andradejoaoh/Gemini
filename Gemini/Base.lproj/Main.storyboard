@@ -86,45 +86,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efc-ny-hV0">
-                                <rect key="frame" x="108" y="542" width="198" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="TPt-aU-gFj">
+                                <rect key="frame" x="0.0" y="-62" width="414" height="1030"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Usuário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="efc-ny-hV0">
+                                <rect key="frame" x="107" y="526.5" width="200" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="username"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-Sv-smr">
-                                <rect key="frame" x="108" y="622" width="198" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xqm-Sv-smr">
+                                <rect key="frame" x="107" y="592.5" width="200" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7w-Sr-oC5">
-                                <rect key="frame" x="173" y="777" width="68" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7w-Sr-oC5">
+                                <rect key="frame" x="107" y="797.5" width="200" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Entrar">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="presentation" modalPresentationStyle="fullScreen" id="FRy-OS-C5V"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gemini" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj6-cU-Tkz">
-                                <rect key="frame" x="126" y="308" width="163" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="esqueceu a senha?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slC-ZV-5l1">
-                                <rect key="frame" x="197" y="664" width="109" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kt3-mi-BTI">
+                                <rect key="frame" x="175" y="630.5" width="132" height="30"/>
+                                <state key="normal" title="esqueceu a senha?">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xqm-Sv-smr" firstAttribute="width" secondItem="efc-ny-hV0" secondAttribute="width" id="1xX-2N-0fR"/>
+                            <constraint firstItem="Xqm-Sv-smr" firstAttribute="top" secondItem="efc-ny-hV0" secondAttribute="bottom" constant="32" id="7YD-l6-3p3"/>
+                            <constraint firstItem="kt3-mi-BTI" firstAttribute="trailing" secondItem="Xqm-Sv-smr" secondAttribute="trailing" id="85j-c4-VzT"/>
+                            <constraint firstItem="kt3-mi-BTI" firstAttribute="top" secondItem="Xqm-Sv-smr" secondAttribute="bottom" constant="4" id="8rw-Lh-tbo"/>
+                            <constraint firstItem="efc-ny-hV0" firstAttribute="width" secondItem="pPP-Yv-ChK" secondAttribute="height" multiplier="100:410" id="GvL-iK-GEY"/>
+                            <constraint firstItem="TPt-aU-gFj" firstAttribute="centerX" secondItem="pPP-Yv-ChK" secondAttribute="centerX" id="IGc-a7-vyr"/>
+                            <constraint firstItem="Xqm-Sv-smr" firstAttribute="centerX" secondItem="pPP-Yv-ChK" secondAttribute="centerX" id="T72-CO-6oS"/>
+                            <constraint firstItem="C7w-Sr-oC5" firstAttribute="centerX" secondItem="pPP-Yv-ChK" secondAttribute="centerX" id="WWf-AX-rFp"/>
+                            <constraint firstItem="TPt-aU-gFj" firstAttribute="centerY" secondItem="pPP-Yv-ChK" secondAttribute="centerY" id="Xgb-yV-h3i"/>
+                            <constraint firstItem="C7w-Sr-oC5" firstAttribute="width" secondItem="Xqm-Sv-smr" secondAttribute="width" id="fFw-EW-xAb"/>
+                            <constraint firstItem="efc-ny-hV0" firstAttribute="centerY" secondItem="pPP-Yv-ChK" secondAttribute="centerY" multiplier="1.2" id="ghJ-3h-9uK"/>
+                            <constraint firstItem="TPt-aU-gFj" firstAttribute="width" secondItem="J2t-Sh-Nyi" secondAttribute="width" id="h7u-bx-QWd"/>
+                            <constraint firstItem="C7w-Sr-oC5" firstAttribute="centerY" secondItem="pPP-Yv-ChK" secondAttribute="centerY" multiplier="1.8" id="idp-ru-WDb"/>
+                            <constraint firstItem="efc-ny-hV0" firstAttribute="centerX" secondItem="pPP-Yv-ChK" secondAttribute="centerX" id="jyo-ve-w0Y"/>
+                            <constraint firstItem="TPt-aU-gFj" firstAttribute="height" secondItem="J2t-Sh-Nyi" secondAttribute="height" multiplier="1.15" id="pxM-Hg-7mH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pPP-Yv-ChK"/>
                     </view>
                 </viewController>
@@ -328,9 +338,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P78-VL-cFY">
-                                        <rect key="frame" x="352" y="30" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P78-VL-cFY">
+                                        <rect key="frame" x="336" y="14" width="62" height="62"/>
+                                        <state key="normal" image="NFCicon"/>
                                         <connections>
                                             <action selector="escanear:" destination="ijR-aB-xf1" eventType="touchUpInside" id="RJS-fc-uFi"/>
                                         </connections>
@@ -584,8 +594,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="NFCicon" width="62" height="62"/>
         <image name="battery" width="30" height="30"/>
         <image name="cowface" width="691" height="583"/>
+        <image name="loginBackground" width="414" height="896"/>
         <image name="map" width="30" height="30"/>
         <image name="pencil-edit" width="30" height="30"/>
         <image name="pin-round" width="30" height="30"/>
