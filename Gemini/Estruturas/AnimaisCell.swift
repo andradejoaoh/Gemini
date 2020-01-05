@@ -12,5 +12,4 @@ class AnimaisCell: UITableViewCell {
     @IBOutlet weak var cellID: UILabel!
     @IBOutlet weak var cellInformacoes: UILabel!
     @IBOutlet weak var cellBateria: UILabel!
-    
 }
