@@ -11,17 +11,21 @@ import CoreNFC
 class AlertasViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var alertasTableView: UITableView!
-
+    var animaisEmAlerta: [Animal] = []
+    var fazenda: Fazenda? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         alertasTableView.delegate = self
         alertasTableView.dataSource = self
         alertasTableView.rowHeight = 100
+        fazenda = JSONHandler.shared.fazenda
+        verificarAnimais()
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return animaisEmAlerta.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -29,6 +33,16 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.idAnimal.text = "Animal XXXX"
         cell.mensagemAlerta.text = "Animal fora de área"
         return cell
+    }
+    
+    func verificarAnimais(){
+        guard let fazenda = fazenda else {return}
+        let distancia: Double = Double(fazenda.raioDaFazenda/1000)
+        for animal in JSONHandler.shared.animais{
+            if animal.bateria <= 10 || animal.latitude > (fazenda.latitude + distancia) || animal.latitude < (fazenda.latitude - distancia) || animal.longitude < (fazenda.longitude - distancia) || animal.longitude > (fazenda.longitude + distancia) {
+                animaisEmAlerta.append(animal)
+            }
+        }
     }
     
 }

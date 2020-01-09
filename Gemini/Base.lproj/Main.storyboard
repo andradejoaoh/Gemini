@@ -16,15 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="qmK-Kc-yyC">
+                                <rect key="frame" x="0.0" y="-2" width="414" height="905"/>
+                            </imageView>
                             <searchBar contentMode="redraw" placeholder="Pesquisar" translatesAutoresizingMaskIntoConstraints="NO" id="6d3-Ar-Hdx">
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N46-nS-rKD">
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AreasCell" rowHeight="100" id="Lbn-3X-lJH" customClass="AlertasCell" customModule="Gemini" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AlertasCell" rowHeight="100" id="Lbn-3X-lJH" customClass="AlertasCell" customModule="Gemini" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lbn-3X-lJH" id="EXj-iI-yqj" customClass="AlertasCell" customModule="Gemini" customModuleProvider="target">
@@ -71,6 +75,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qmK-Kc-yyC" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="3Nc-E6-V4F"/>
                             <constraint firstItem="N46-nS-rKD" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="59A-FD-WHe"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="N46-nS-rKD" secondAttribute="bottom" id="6rj-fs-1yZ"/>
                             <constraint firstItem="6d3-Ar-Hdx" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="DSB-Oi-lXI"/>
@@ -78,6 +83,9 @@
                             <constraint firstItem="N46-nS-rKD" firstAttribute="top" secondItem="6d3-Ar-Hdx" secondAttribute="bottom" symbolic="YES" id="Hrg-fm-Fbm"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="N46-nS-rKD" secondAttribute="trailing" id="KtN-ev-yBv"/>
                             <constraint firstItem="6d3-Ar-Hdx" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="TYk-n9-XNN"/>
+                            <constraint firstItem="qmK-Kc-yyC" firstAttribute="height" secondItem="QS5-Rx-YEW" secondAttribute="height" multiplier="1.01" id="qqS-dd-vOF"/>
+                            <constraint firstItem="qmK-Kc-yyC" firstAttribute="centerY" secondItem="O1u-W8-tvY" secondAttribute="centerY" id="s63-iG-wKE"/>
+                            <constraint firstItem="qmK-Kc-yyC" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="vkR-Zl-UFe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -344,6 +352,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="areasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="n30-IN-iJ0">
+                                <rect key="frame" x="0.0" y="-2" width="414" height="905"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dqg-L6-iRm">
                                 <rect key="frame" x="8" y="177.5" width="398" height="635.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -422,9 +433,6 @@
                                     <constraint firstItem="P78-VL-cFY" firstAttribute="centerY" secondItem="9AF-99-Yqb" secondAttribute="centerY" id="bw2-jT-p2u"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="areasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="n30-IN-iJ0">
-                                <rect key="frame" x="0.0" y="-2" width="414" height="905"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -540,9 +548,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ijd-hy-gbm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Animais" id="5rt-mJ-IDM">
-                        <barButtonItem key="rightBarButtonItem" title="Buscar" image="search" id="aJw-An-BHa"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Animais" id="5rt-mJ-IDM"/>
                     <connections>
                         <outlet property="animaisTableView" destination="Ih2-VJ-LdI" id="9QP-3R-ybA"/>
                         <segue destination="HbW-4F-XoG" kind="show" identifier="atividadesSegue" id="7yk-Ll-UWS"/>
@@ -560,7 +566,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cowface" translatesAutoresizingMaskIntoConstraints="NO" id="miV-R3-HGE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AngusFace" translatesAutoresizingMaskIntoConstraints="NO" id="miV-R3-HGE">
                                 <rect key="frame" x="260" y="104" width="138" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="144" id="HDv-6Q-qaz"/>
@@ -672,17 +678,32 @@
             </objects>
             <point key="canvasLocation" x="3463.7681159420295" y="-975"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="BeR-9G-LJT">
+            <objects>
+                <viewController id="e7f-fO-XgM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LEQ-pQ-HVM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="x65-Vo-Q3i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUI-AD-9AB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4410" y="-975"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="AngusFace" width="691" height="583"/>
         <image name="NFCicon" width="62" height="62"/>
+        <image name="alertasBackground" width="414" height="896"/>
         <image name="areasBackground" width="414" height="896"/>
         <image name="battery" width="30" height="30"/>
-        <image name="cowface" width="691" height="583"/>
         <image name="loginBackground" width="414" height="896"/>
         <image name="map" width="30" height="30"/>
         <image name="pencil-edit" width="30" height="30"/>
         <image name="pin-round" width="30" height="30"/>
-        <image name="search" width="30" height="30"/>
         <image name="settings" width="30" height="30"/>
     </resources>
 </document>

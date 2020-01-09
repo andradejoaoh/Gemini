@@ -9,11 +9,18 @@
 import UIKit
 
 class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+                            /* |-------------------|
+                               |VARIÁVEIS E OUTLETS|
+                               |-------------------| */
     @IBOutlet weak var animaisTableView: UITableView!
-    
     var animais: [Animal] = []
     var numeroArea: Int? = nil
     
+                             /* |---------------|
+                                |FUNÇÕES DA VIEW|
+                                |---------------| */
+
     override func viewDidLoad() {
         super.viewDidLoad()
         animaisTableView.delegate = self
@@ -21,6 +28,11 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
         animaisTableView.rowHeight = 130
         self.animais = JSONHandler.shared.animais.filter{ $0.area == numeroArea ?? 1 }
     }
+    
+                           /* |--------------------|
+                              |FUNÇÕES DA TABLEVIEW|
+                              |--------------------| */
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animais.count
@@ -39,6 +51,9 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
         performSegue(withIdentifier: "atividadesSegue", sender: self)
     }
     
+                                /* |----------------|
+                                   |FUNÇÕES DA SEGUE|
+                                   |----------------| */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath = animaisTableView.indexPathForSelectedRow
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		614C6D5C23C6BFD900CD559C /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614C6D5B23C6BFD900CD559C /* EditarViewController.swift */; };
 		615BEC6823904968003668D5 /* AlertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC6723904968003668D5 /* AlertasViewController.swift */; };
 		615BEC6A2390598C003668D5 /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */; };
 		61682B7323B9CBD0004CCF2B /* AreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61682B7223B9CBD0004CCF2B /* AreaCell.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		614C6D5B23C6BFD900CD559C /* EditarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarViewController.swift; sourceTree = "<group>"; };
 		615BEC6723904968003668D5 /* AlertasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertasViewController.swift; sourceTree = "<group>"; };
 		615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
 		61682B7223B9CBD0004CCF2B /* AreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCell.swift; sourceTree = "<group>"; usesTabs = 0; };
@@ -131,6 +133,7 @@
 				61B51031239077BE005BCB69 /* AreasViewController.swift */,
 				61B5102323906D7C005BCB69 /* MapaViewController.swift */,
 				615BEC6723904968003668D5 /* AlertasViewController.swift */,
+				614C6D5B23C6BFD900CD559C /* EditarViewController.swift */,
 				615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */,
 				61C630DC238F01FB007A7B2C /* Main.storyboard */,
 				61C630E1238F01FF007A7B2C /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 				6177E05923C271D000C087F6 /* AlertasCell.swift in Sources */,
 				61682B7323B9CBD0004CCF2B /* AreaCell.swift in Sources */,
 				61B5102D23907396005BCB69 /* JSONHandler.swift in Sources */,
+				614C6D5C23C6BFD900CD559C /* EditarViewController.swift in Sources */,
 				61ECD5E42390C85D00F61C3C /* AtividadesCell.swift in Sources */,
 				61EDCF9B2396FCE700622CAA /* Remedio.swift in Sources */,
 				61B5103423907817005BCB69 /* AnimaisViewController.swift in Sources */,
