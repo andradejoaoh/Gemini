@@ -1,9 +1,9 @@
 {
     "usuario" : "user",
     "senha" : "pass",
-    "nomeFazenda" : "Fazenda do Povo",
+    "nomeFazenda" : "Fazenda Cachoeirinha",
     "qtdeAreas" : 7,
-    "latitude" : -29.500,
-    "longitude" : -29.555,
+    "latitude" : -20.981720,
+    "longitude" : -50.473240,
     "raioDaFazenda" : 5000
 }

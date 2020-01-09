@@ -13,7 +13,9 @@ class MapaViewController: UIViewController{
     @IBOutlet weak var mapOutlet: MKMapView!
     let locationManager = CLLocationManager()
     var animais: [Animal] = []
-    var fazenda:Fazenda?
+    var annotationPins: [PinMapa] = []
+    var fazenda: Fazenda?
+    
      override func viewDidLoad() {
         super.viewDidLoad()
         animais = JSONHandler.shared.animais
@@ -61,13 +63,14 @@ class MapaViewController: UIViewController{
             let animalBateria = "Bateria: " + String(animal.bateria) + "%"
             let animalCoordenada = CLLocationCoordinate2D(latitude: animal.latitude, longitude: animal.longitude)
             let animalPin = PinMapa(id: animalID, bateria: animalBateria, coordinate: animalCoordenada)
-            mapOutlet.addAnnotation(animalPin)
+            annotationPins.append(animalPin)
         }
+        mapOutlet.addAnnotations(annotationPins)
     }
     func centerMapOnLocation(location: CLLocation) {
         guard let fazenda = fazenda else {return}
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
-                                                  latitudinalMeters: Double(fazenda.raioDaFazenda), longitudinalMeters: Double(fazenda.raioDaFazenda))
+                                                  latitudinalMeters: Double(fazenda.raioDaFazenda/5), longitudinalMeters: Double(fazenda.raioDaFazenda/5))
         mapOutlet.setRegion(coordinateRegion, animated: true)
     }
 }

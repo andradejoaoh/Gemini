@@ -13,9 +13,11 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
                             /* |-------------------|
                                |VARIÁVEIS E OUTLETS|
                                |-------------------| */
-    @IBOutlet weak var animaisTableView: UITableView!
+    
     var animais: [Animal] = []
     var numeroArea: Int? = nil
+    @IBOutlet weak var animaisTableView: UITableView!
+
     
                              /* |---------------|
                                 |FUNÇÕES DA VIEW|
@@ -28,6 +30,8 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
         animaisTableView.rowHeight = 130
         self.animais = JSONHandler.shared.animais.filter{ $0.area == numeroArea ?? 1 }
     }
+
+    
     
                            /* |--------------------|
                               |FUNÇÕES DA TABLEVIEW|

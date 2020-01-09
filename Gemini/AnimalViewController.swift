@@ -9,6 +9,12 @@
 import UIKit
 
 class AnimalViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+                                /* |-------------------|
+                                   |VARIÁVEIS E OUTLETS|
+                                   |-------------------| */
+    var animal:Animal?
+    
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var racaLabel: UILabel!
     @IBOutlet weak var sexoLabel: UILabel!
@@ -17,7 +23,9 @@ class AnimalViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var vacaImage: UIImageView!
     @IBOutlet weak var atividadesTableView: UITableView!
     
-    var animal:Animal?
+                                     /* |---------------|
+                                        |FUNÇÕES DA VIEW|
+                                        |---------------| */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +41,11 @@ class AnimalViewController: UIViewController, UITableViewDataSource, UITableView
         bateriaLabel.text = "Bateria " + String(animal.bateria) + "%"
         vacaImage.image = UIImage(named: "\(animal.raca)Face")
     }
+    
+                             /* |--------------------|
+                                |FUNÇÕES DA TABLEVIEW|
+                                |--------------------| */
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         animal?.registroDeAtividades.count ?? 0

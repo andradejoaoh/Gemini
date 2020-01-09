@@ -10,20 +10,33 @@ import CoreNFC
 
 class AlertasViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+                                /* |-------------------|
+                                   |VARIÁVEIS E OUTLETS|
+                                   |-------------------| */
+    
     @IBOutlet weak var alertasTableView: UITableView!
     var animaisEmAlerta: [Animal] = []
     var fazenda: Fazenda? = nil
+    
+                                /* |---------------|
+                                   |FUNÇÕES DA VIEW|
+                                   |---------------| */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         alertasTableView.delegate = self
         alertasTableView.dataSource = self
+        alertasTableView.separatorStyle = .none
         alertasTableView.rowHeight = 100
         fazenda = JSONHandler.shared.fazenda
         verificarAnimais()
     }
     
     
+                                /* |--------------------|
+                                   |FUNÇÕES DA TABLEVIEW|
+                                   |--------------------| */
+            
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animaisEmAlerta.count
     }
@@ -39,12 +52,19 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
             cell.imagemAlerta.image = UIImage(named: "battery-no")
             cell.mensagemAlerta.text = "Coleira com pouca bateria."
         }
+        cell.layer.cornerRadius = 12
+        
         return cell
     }
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "alertasSegue", sender: self)
     }
+    
+                                /* |----------------|
+                                   |FUNÇÕES DA SEGUE|
+                                   |----------------| */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath = alertasTableView.indexPathForSelectedRow
@@ -53,6 +73,10 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
             AnimalViewController.animal = animaisEmAlerta[indexPath?.row ?? 0]
         }
     }
+    
+                                /* |-----------------|
+                                   |FUNÇÕES DA CLASSE|
+                                   |-----------------| */
     
     func verificarAnimais(){
         guard let fazenda = fazenda else {return}
