@@ -30,9 +30,28 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: AlertasCell = self.alertasTableView.dequeueReusableCell(withIdentifier: "AlertasCell") as! AlertasCell
-        cell.idAnimal.text = "Animal XXXX"
-        cell.mensagemAlerta.text = "Animal fora de área"
+        cell.idAnimal.text = "Animal " + animaisEmAlerta[indexPath.item].id
+        if animaisEmAlerta[indexPath.item].bateria > 10 {
+            cell.imagemAlerta.image = UIImage(named: "animalDesaparecidoIcon")
+            cell.mensagemAlerta.text = "Animal fora de área."
+
+        } else {
+            cell.imagemAlerta.image = UIImage(named: "battery-no")
+            cell.mensagemAlerta.text = "Coleira com pouca bateria."
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "alertasSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = alertasTableView.indexPathForSelectedRow
+        
+        if let AnimalViewController = segue.destination as? AnimalViewController {
+            AnimalViewController.animal = animaisEmAlerta[indexPath?.row ?? 0]
+        }
     }
     
     func verificarAnimais(){
