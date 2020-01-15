@@ -8,35 +8,37 @@
 import UIKit
 import CoreNFC
 
-class AlertasViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AlertasViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
-                                /* |-------------------|
-                                   |VARIÁVEIS E OUTLETS|
-                                   |-------------------| */
+    /* |-------------------|
+     |VARIÁVEIS E OUTLETS|
+     |-------------------| */
     
     @IBOutlet weak var alertasTableView: UITableView!
+    @IBOutlet weak var alertasSearchBar: UISearchBar!
     var animaisEmAlerta: [Animal] = []
+    var searchBarResultados: [Animal] = []
     var fazenda: Fazenda? = nil
     
-                                /* |---------------|
-                                   |FUNÇÕES DA VIEW|
-                                   |---------------| */
+    /* |---------------|
+     |FUNÇÕES DA VIEW|
+     |---------------| */
     
     override func viewDidLoad() {
         super.viewDidLoad()
         alertasTableView.delegate = self
         alertasTableView.dataSource = self
         alertasTableView.separatorStyle = .none
-        alertasTableView.rowHeight = 100
+        alertasTableView.rowHeight = alertasTableView.frame.height*0.15
         fazenda = JSONHandler.shared.fazenda
         verificarAnimais()
     }
     
     
-                                /* |--------------------|
-                                   |FUNÇÕES DA TABLEVIEW|
-                                   |--------------------| */
-            
+    /* |--------------------|
+     |FUNÇÕES DA TABLEVIEW|
+     |--------------------| */
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return animaisEmAlerta.count
     }
@@ -47,7 +49,7 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
         if animaisEmAlerta[indexPath.item].bateria > 10 {
             cell.imagemAlerta.image = UIImage(named: "animalDesaparecidoIcon")
             cell.mensagemAlerta.text = "Animal fora de área."
-
+            
         } else {
             cell.imagemAlerta.image = UIImage(named: "battery-no")
             cell.mensagemAlerta.text = "Coleira com pouca bateria."
@@ -62,9 +64,9 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
         performSegue(withIdentifier: "alertasSegue", sender: self)
     }
     
-                                /* |----------------|
-                                   |FUNÇÕES DA SEGUE|
-                                   |----------------| */
+    /* |----------------|
+     |FUNÇÕES DA SEGUE|
+     |----------------| */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath = alertasTableView.indexPathForSelectedRow
@@ -74,9 +76,9 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
         }
     }
     
-                                /* |-----------------|
-                                   |FUNÇÕES DA CLASSE|
-                                   |-----------------| */
+    /* |-----------------|
+     |FUNÇÕES DA CLASSE|
+     |-----------------| */
     
     func verificarAnimais(){
         guard let fazenda = fazenda else {return}
@@ -87,5 +89,4 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
             }
         }
     }
-    
 }

@@ -53,9 +53,7 @@ class AreasViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         cell.numeroArea.text = "Área " + String(indexPath.row + 1)
         cell.quantidadeAnimais.text = "100 animais"
-        cell.layer.cornerRadius = 4
-        cell.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        cell.layer.borderWidth = 2
+        cell.layer.cornerRadius = 6
         
         return cell
     }
@@ -66,7 +64,7 @@ class AreasViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.areasCollectionViewOutlet.frame.width/2 - 8, height: self.areasCollectionViewOutlet.frame.height*0.15)
+        return CGSize(width: self.areasCollectionViewOutlet.frame.width/2 - 8, height: self.areasCollectionViewOutlet.frame.height*0.1)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16

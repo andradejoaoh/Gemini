@@ -17,7 +17,7 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
     var animais: [Animal] = []
     var numeroArea: Int? = nil
     @IBOutlet weak var animaisTableView: UITableView!
-
+    @IBOutlet weak var searchBar: UISearchBar!
     
                              /* |---------------|
                                 |FUNÇÕES DA VIEW|
@@ -27,7 +27,8 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         animaisTableView.delegate = self
         animaisTableView.dataSource = self
-        animaisTableView.rowHeight = 130
+        animaisTableView.rowHeight = 120
+        animaisTableView.separatorStyle = .none
         self.animais = JSONHandler.shared.animais.filter{ $0.area == numeroArea ?? 1 }
     }
 
@@ -48,6 +49,7 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.cellBateria.text = "Bateria " + String(self.animais[indexPath.row].bateria) + "%"
         cell.cellInformacoes.text = "Informação recebida há 2hrs"
         cell.cellImage.image = UIImage(named: self.animais[indexPath.row].raca)
+        cell.layer.cornerRadius = 6
         return cell
     }
     

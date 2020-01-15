@@ -13,4 +13,15 @@ class AnimaisCell: UITableViewCell {
     @IBOutlet weak var cellInformacoes: UILabel!
     @IBOutlet weak var cellBateria: UILabel!
     
+    override var frame: CGRect {
+      get {
+          return super.frame
+      }
+      set (newFrame) {
+          var frame = newFrame
+          frame.origin.y += 2
+          frame.size.height -= 5
+          super.frame = frame
+      }
+    }
 }
