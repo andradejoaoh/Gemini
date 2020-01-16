@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61201CA623D00FFE00448079 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61201CA523D00FFE00448079 /* KeyboardHandler.swift */; };
 		614C6D5C23C6BFD900CD559C /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614C6D5B23C6BFD900CD559C /* EditarViewController.swift */; };
 		615BEC6823904968003668D5 /* AlertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC6723904968003668D5 /* AlertasViewController.swift */; };
 		615BEC6A2390598C003668D5 /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */; };
 		61682B7323B9CBD0004CCF2B /* AreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61682B7223B9CBD0004CCF2B /* AreaCell.swift */; };
 		6177E05923C271D000C087F6 /* AlertasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6177E05823C271D000C087F6 /* AlertasCell.swift */; };
+		61809F3B23D1001800495699 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61809F3A23D1001800495699 /* LoginViewController.swift */; };
 		61B5102423906D7C005BCB69 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B5102323906D7C005BCB69 /* MapaViewController.swift */; };
 		61B5102823906F7F005BCB69 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B5102723906F7F005BCB69 /* Animal.swift */; };
 		61B5102A239070AC005BCB69 /* Registro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B51029239070AC005BCB69 /* Registro.swift */; };
@@ -35,11 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		61201CA523D00FFE00448079 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		614C6D5B23C6BFD900CD559C /* EditarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarViewController.swift; sourceTree = "<group>"; };
 		615BEC6723904968003668D5 /* AlertasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertasViewController.swift; sourceTree = "<group>"; };
 		615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
 		61682B7223B9CBD0004CCF2B /* AreaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCell.swift; sourceTree = "<group>"; usesTabs = 0; };
 		6177E05823C271D000C087F6 /* AlertasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertasCell.swift; sourceTree = "<group>"; };
+		61809F3A23D1001800495699 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		61B51022239069FA005BCB69 /* Gemini.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gemini.entitlements; sourceTree = "<group>"; };
 		61B5102323906D7C005BCB69 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		61B5102723906F7F005BCB69 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				61B5102C23907396005BCB69 /* JSONHandler.swift */,
+				61201CA523D00FFE00448079 /* KeyboardHandler.swift */,
 			);
 			path = Handlers;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				61C630D6238F01FB007A7B2C /* SceneDelegate.swift */,
 				61B5103323907817005BCB69 /* AnimaisViewController.swift */,
 				61B510352390782E005BCB69 /* AnimalViewController.swift */,
+				61809F3A23D1001800495699 /* LoginViewController.swift */,
 				61B51031239077BE005BCB69 /* AreasViewController.swift */,
 				61B5102323906D7C005BCB69 /* MapaViewController.swift */,
 				615BEC6723904968003668D5 /* AlertasViewController.swift */,
@@ -224,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61809F3B23D1001800495699 /* LoginViewController.swift in Sources */,
 				61B5102A239070AC005BCB69 /* Registro.swift in Sources */,
 				61EDCF9F23982E9000622CAA /* Fazenda.swift in Sources */,
 				61B51032239077BE005BCB69 /* AreasViewController.swift in Sources */,
@@ -239,6 +246,7 @@
 				61B5103423907817005BCB69 /* AnimaisViewController.swift in Sources */,
 				61B510362390782E005BCB69 /* AnimalViewController.swift in Sources */,
 				615BEC6A2390598C003668D5 /* ConfiguracoesViewController.swift in Sources */,
+				61201CA623D00FFE00448079 /* KeyboardHandler.swift in Sources */,
 				61B5102823906F7F005BCB69 /* Animal.swift in Sources */,
 				61EDCF9D2398233600622CAA /* PinMapa.swift in Sources */,
 				61C630D7238F01FB007A7B2C /* SceneDelegate.swift in Sources */,

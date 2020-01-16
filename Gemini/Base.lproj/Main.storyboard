@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u2S-Yz-QQ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="u2S-Yz-QQ9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="qmK-Kc-yyC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="qmK-Kc-yyC">
                                 <rect key="frame" x="0.0" y="-2" width="414" height="905"/>
                             </imageView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Pesquisar" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d3-Ar-Hdx">
@@ -107,8 +107,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="h5U-ES-uzI">
+                                <rect key="frame" x="0.0" y="-6.5" width="414" height="914"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWl-ab-ldq">
                                 <rect key="frame" x="185" y="753" width="44" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Sair">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -143,7 +147,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="WL3-qk-JjF" firstAttribute="bottom" secondItem="VWl-ab-ldq" secondAttribute="bottom" constant="16" id="41h-P7-iFD"/>
+                            <constraint firstItem="h5U-ES-uzI" firstAttribute="centerX" secondItem="WL3-qk-JjF" secondAttribute="centerX" id="8SE-nU-7Bh"/>
+                            <constraint firstItem="h5U-ES-uzI" firstAttribute="centerY" secondItem="WL3-qk-JjF" secondAttribute="centerY" id="Orb-Rl-r1n"/>
+                            <constraint firstItem="h5U-ES-uzI" firstAttribute="height" secondItem="Deb-9w-0vE" secondAttribute="height" multiplier="1.02" id="P8c-8V-4dv"/>
                             <constraint firstItem="VWl-ab-ldq" firstAttribute="centerX" secondItem="WL3-qk-JjF" secondAttribute="centerX" id="Ydf-Ke-4ac"/>
+                            <constraint firstItem="h5U-ES-uzI" firstAttribute="width" secondItem="Deb-9w-0vE" secondAttribute="width" id="xbE-aX-P5c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WL3-qk-JjF"/>
                     </view>
@@ -156,7 +164,7 @@
         <!--Login-->
         <scene sceneID="SKq-1T-gF1">
             <objects>
-                <viewController title="Login" modalPresentationStyle="fullScreen" id="u2S-Yz-QQ9" sceneMemberID="viewController">
+                <viewController title="Login" modalPresentationStyle="fullScreen" id="u2S-Yz-QQ9" customClass="LoginViewController" customModule="Gemini" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J2t-Sh-Nyi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,8 +237,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="IaR-fi-l6x" kind="relationship" relationship="viewControllers" id="Bv2-jH-ofB"/>
-                        <segue destination="IVc-ba-Qt1" kind="relationship" relationship="viewControllers" id="nmG-58-uMj"/>
                         <segue destination="JtC-GX-Kdb" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="IVc-ba-Qt1" kind="relationship" relationship="viewControllers" id="nmG-58-uMj"/>
                         <segue destination="PsV-cq-bW8" kind="relationship" relationship="viewControllers" id="rdS-NR-bfZ"/>
                     </connections>
                 </tabBarController>
@@ -273,7 +281,7 @@
         <scene sceneID="MPo-qA-wW6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IVc-ba-Qt1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mapa" image="pin-round" id="7Nq-6m-62Q"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mappin.and.ellipse" catalog="system" id="7Nq-6m-62Q"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SJQ-0b-rFp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -292,7 +300,7 @@
         <scene sceneID="dBu-Yn-E7m">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JtC-GX-Kdb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Alertas" image="battery" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Alertas" image="exclamationmark.triangle" catalog="system" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xzZ-DY-Gzq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -311,7 +319,7 @@
         <scene sceneID="IMl-Rp-Nm0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PsV-cq-bW8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Configurações" image="settings" id="UCw-lH-9kN"/>
+                    <tabBarItem key="tabBarItem" title="Configurações" image="gear" catalog="system" id="UCw-lH-9kN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NLf-X8-o2q">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -330,7 +338,7 @@
         <scene sceneID="ONy-ji-AJz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IaR-fi-l6x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Áreas" image="map" id="hrF-YZ-3Td"/>
+                    <tabBarItem key="tabBarItem" title="Áreas" image="house" catalog="system" id="hrF-YZ-3Td"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Vp-4i-WRU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -474,7 +482,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="areasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="FC7-nJ-g2F">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="areasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="FC7-nJ-g2F">
                                 <rect key="frame" x="0.0" y="-6.5" width="414" height="914"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ih2-VJ-LdI">
@@ -559,8 +567,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Animais" id="5rt-mJ-IDM"/>
                     <connections>
+                        <outlet property="animaisSearchBar" destination="L9o-AM-hJm" id="bee-JT-lZZ"/>
                         <outlet property="animaisTableView" destination="Ih2-VJ-LdI" id="9QP-3R-ybA"/>
-                        <outlet property="searchBar" destination="L9o-AM-hJm" id="Zge-h6-bFH"/>
                         <segue destination="HbW-4F-XoG" kind="show" identifier="atividadesSegue" id="7yk-Ll-UWS"/>
                     </connections>
                 </viewController>
@@ -576,7 +584,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gqY-yc-Zg2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertasBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gqY-yc-Zg2">
                                 <rect key="frame" x="0.0" y="-2" width="414" height="905"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AngusFace" translatesAutoresizingMaskIntoConstraints="NO" id="miV-R3-HGE">
@@ -718,12 +726,12 @@
         <image name="NFCicon" width="62" height="62"/>
         <image name="alertasBackground" width="414" height="896"/>
         <image name="areasBackground" width="414" height="896"/>
-        <image name="battery" width="30" height="30"/>
+        <image name="exclamationmark.triangle" catalog="system" width="64" height="56"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="house" catalog="system" width="64" height="54"/>
         <image name="loginBackground" width="414" height="896"/>
-        <image name="map" width="30" height="30"/>
+        <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
         <image name="pencil-edit" width="30" height="30"/>
-        <image name="pin-round" width="30" height="30"/>
-        <image name="settings" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7yk-Ll-UWS"/>

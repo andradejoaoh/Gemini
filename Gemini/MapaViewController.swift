@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapaViewController: UIViewController{
+class MapaViewController: UIViewController, MKMapViewDelegate{
     @IBOutlet weak var mapOutlet: MKMapView!
     let locationManager = CLLocationManager()
     var animais: [Animal] = []
@@ -25,6 +25,7 @@ class MapaViewController: UIViewController{
             centerMapOnLocation(location: initialLocation)
         }
         mapOutlet.mapType = .satellite
+        mapOutlet.delegate = self
         checkLocationServices()
         adicionarPins()
     }
@@ -62,15 +63,36 @@ class MapaViewController: UIViewController{
             let animalID = "ID: " + animal.id
             let animalBateria = "Bateria: " + String(animal.bateria) + "%"
             let animalCoordenada = CLLocationCoordinate2D(latitude: animal.latitude, longitude: animal.longitude)
-            let animalPin = PinMapa(id: animalID, bateria: animalBateria, coordinate: animalCoordenada)
-            annotationPins.append(animalPin)
+//            let animalPin = PinMapa(id: animalID, bateria: animalBateria, coordinate: animalCoordenada)
+            let animalPin = MKPointAnnotation()
+            animalPin.title = animalID
+            animalPin.subtitle = animalBateria
+            animalPin.coordinate = animalCoordenada
+//            annotationPins.append(animalPin)
+            mapOutlet.addAnnotation(animalPin)
         }
-        mapOutlet.addAnnotations(annotationPins)
+//        mapOutlet.addAnnotations(annotationPins)
     }
     func centerMapOnLocation(location: CLLocation) {
         guard let fazenda = fazenda else {return}
         let coordinateRegion = MKCoordinateRegion(center: location.coordinate,
                                                   latitudinalMeters: Double(fazenda.raioDaFazenda/5), longitudinalMeters: Double(fazenda.raioDaFazenda/5))
         mapOutlet.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+
+        let identifier = "Annotation"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.canShowCallout = true
+        } else {
+            annotationView!.annotation = annotation
+        }
+
+        return annotationView
     }
 }

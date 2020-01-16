@@ -6,8 +6,8 @@
     "raca" : "Nelore",
     "sexo" : "Macho",
     "bateria" : 80,
-    "latitude" : -20.981722,
-    "longitude" : -50.473242,
+    "latitude" : -20.9817,
+    "longitude" : -50.4732,
     
     "remedios" : [{
         "dataMedicacao" : "21/11/2019",
@@ -32,15 +32,15 @@
     }]
 },
 {
-    "id" : "AVB1E3X",
+    "id" : "IJB1S3X",
     "lote" : "32A",
     "area" : 4,
     "tipo" : "Bovino",
     "raca" : "Nelore",
     "sexo" : "Macho",
     "bateria" : 10,
-    "latitude" : -20.981723,
-    "longitude" : -50.473242,
+    "latitude" : -20.9816,
+    "longitude" : -50.4733,
     
     "remedios" : [{
         "dataMedicacao" : "21/11/2019",
@@ -72,8 +72,8 @@
     "raca" : "Angus",
     "sexo" : "Macho",
     "bateria" : 80,
-    "latitude" : -20.981724,
-    "longitude" : -50.473244,
+    "latitude" : -20.9816,
+    "longitude" : -50.4734,
     
     "remedios" : [{
         "dataMedicacao" : "21/11/2019",
@@ -105,8 +105,8 @@
     "raca" : "Nelore",
     "sexo" : "Macho",
     "bateria" : 10,
-    "latitude" : -20.981723,
-    "longitude" : -50.473242,
+    "latitude" : -20.9815,
+    "longitude" : -50.4735,
     
     "remedios" : [{
         "dataMedicacao" : "21/11/2019",
