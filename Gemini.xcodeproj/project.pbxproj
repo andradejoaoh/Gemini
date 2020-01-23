@@ -135,8 +135,8 @@
 				61C630D6238F01FB007A7B2C /* SceneDelegate.swift */,
 				61B5103323907817005BCB69 /* AnimaisViewController.swift */,
 				61B510352390782E005BCB69 /* AnimalViewController.swift */,
-				61809F3A23D1001800495699 /* LoginViewController.swift */,
 				61B51031239077BE005BCB69 /* AreasViewController.swift */,
+				61809F3A23D1001800495699 /* LoginViewController.swift */,
 				61B5102323906D7C005BCB69 /* MapaViewController.swift */,
 				615BEC6723904968003668D5 /* AlertasViewController.swift */,
 				614C6D5B23C6BFD900CD559C /* EditarViewController.swift */,
@@ -405,7 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jha.Gemini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,7 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.jha.Gemini;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

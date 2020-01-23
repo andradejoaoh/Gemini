@@ -53,6 +53,7 @@ class AnimaisViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.cellInformacoes.text = "Informação recebida há 2hrs"
         cell.cellImage.image = UIImage(named: self.animaisFiltrados[indexPath.row].raca)
         cell.layer.cornerRadius = 6
+        cell.layer.masksToBounds = true
         return cell
     }
     

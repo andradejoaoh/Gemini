@@ -52,7 +52,13 @@ class AreasViewController: UIViewController, UICollectionViewDelegate, UICollect
         let cell: AreaCell = self.areasCollectionViewOutlet.dequeueReusableCell(withReuseIdentifier: "AreaCell", for: indexPath) as! AreaCell
         
         cell.numeroArea.text = "Área " + String(indexPath.row + 1)
-        cell.quantidadeAnimais.text = "100 animais"
+        let nroAnimais = JSONHandler.shared.animais.filter{$0.area == indexPath.row + 1}.count
+        if nroAnimais > 0 {
+            cell.quantidadeAnimais.text = String(nroAnimais) + " animais"
+        } else {
+            cell.quantidadeAnimais.text = "Não há animais na área"
+        }
+        
         cell.layer.cornerRadius = 6
         
         return cell

@@ -56,6 +56,7 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
             cell.mensagemAlerta.text = "Coleira com pouca bateria."
         }
         cell.layer.cornerRadius = 12
+        cell.layer.masksToBounds = true
         
         return cell
     }
