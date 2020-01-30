@@ -47,13 +47,15 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
     override func viewWillDisappear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent
         navigationController?.navigationBar.tintColor = .white
-
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .darkContent
         navigationController?.navigationBar.tintColor = .black
         self.title = "Mapa"
         self.navigationController?.title = "Mapa"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }
     
                            /* |---------------------|
