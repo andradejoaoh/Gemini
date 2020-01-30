@@ -9,8 +9,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var botaoEntrar: UIButton!
+    
+    
     override func viewDidLoad() {
         self.hideKeyboardWhenTappedAround()
+        botaoEntrar.layer.cornerRadius = 6
     }
     override func viewWillDisappear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent

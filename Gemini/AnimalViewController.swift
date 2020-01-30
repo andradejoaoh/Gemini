@@ -32,6 +32,7 @@ class AnimalViewController: UIViewController, UITableViewDataSource, UITableView
         atividadesTableView.delegate = self
         atividadesTableView.dataSource = self
         atividadesTableView.rowHeight = 80
+        atividadesTableView.separatorStyle = .none
         
         guard let animal = animal else {return}
         idLabel.text = "ID: " + animal.id
@@ -55,7 +56,20 @@ class AnimalViewController: UIViewController, UITableViewDataSource, UITableView
         let cell: AtividadesCell = self.atividadesTableView.dequeueReusableCell(withIdentifier: "AtividadesCell") as! AtividadesCell
         guard let animal = animal else {return cell}
         cell.dataLabel.text = animal.registroDeAtividades[indexPath.row].dataAcontecimento
-        cell.acaoLabel.text = animal.registroDeAtividades[indexPath.row].acontecimentos[0] 
+        cell.acaoLabel.text = animal.registroDeAtividades[indexPath.row].acontecimentos[0]
+        cell.layer.cornerRadius = 6
+        cell.layer.masksToBounds = true
         return cell
+    }
+    @IBAction func mostrarNoMapa(_ sender: Any) {
+        performSegue(withIdentifier: "mapaSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let MapaViewController = segue.destination as? MapaViewController {
+            MapaViewController.latitudeInicial = animal?.latitude
+            MapaViewController.longitudeInicial = animal?.longitude
+            UIApplication.shared.statusBarStyle = .darkContent
+            MapaViewController.navigationController?.navigationBar.barTintColor = UIColor.black
+        }
     }
 }

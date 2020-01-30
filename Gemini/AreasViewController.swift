@@ -70,7 +70,7 @@ class AreasViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.areasCollectionViewOutlet.frame.width/2 - 8, height: self.areasCollectionViewOutlet.frame.height*0.1)
+        return CGSize(width: self.areasCollectionViewOutlet.frame.width/2 - 8, height: self.areasCollectionViewOutlet.frame.height*0.12)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16

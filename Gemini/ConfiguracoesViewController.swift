@@ -10,8 +10,11 @@ import UIKit
 
 class ConfiguracoesViewController: UIViewController {
 
+    @IBOutlet weak var botaoSair: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        botaoSair.layer.cornerRadius = 6
     }
 
     @IBAction func sair(_ sender: Any) {

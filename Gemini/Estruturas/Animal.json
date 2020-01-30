@@ -39,8 +39,8 @@
     "raca" : "Nelore",
     "sexo" : "Macho",
     "bateria" : 10,
-    "latitude" : -20.9816,
-    "longitude" : -50.4733,
+    "latitude" : -20.9822,
+    "longitude" : -50.4737,
     
     "remedios" : [{
         "dataMedicacao" : "21/11/2019",
@@ -72,8 +72,8 @@
     "raca" : "Angus",
     "sexo" : "Macho",
     "bateria" : 80,
-    "latitude" : -20.9816,
-    "longitude" : -50.4734,
+    "latitude" : -20.9812,
+    "longitude" : -50.4729,
     
     "remedios" : [{
         "dataMedicacao" : "21/11/2019",
@@ -105,8 +105,74 @@
     "raca" : "Nelore",
     "sexo" : "Macho",
     "bateria" : 10,
-    "latitude" : -20.9815,
-    "longitude" : -50.4735,
+    "latitude" : -20.9810,
+    "longitude" : -50.4730,
+    
+    "remedios" : [{
+        "dataMedicacao" : "21/11/2019",
+        "nomeMedicacao" : ["Brucelose","Raiva"]
+    },
+    {
+        "dataMedicacao" : "21/11/2019",
+        "nomeMedicacao" : ["Brucelose","Raiva"]
+    }],
+    
+    "registroDeAtividades" : [{
+        "dataAcontecimento" : "21/11/2019",
+        "acontecimentos" : ["Bebeu água", "Tomou vacina"]
+    },
+    {
+        "dataAcontecimento" : "22/11/2019",
+        "acontecimentos" : ["Tomou Remédio"]
+    },
+    {
+        "dataAcontecimento" : "23/11/2019",
+        "acontecimentos" : ["Bebeu água", "Trocou de pasto"]
+    }]
+},
+{
+    "id" : "ZZZ809",
+    "lote" : "32B",
+    "area" : 3,
+    "tipo" : "Bovino",
+    "raca" : "Nelore",
+    "sexo" : "Macho",
+    "bateria" : 100,
+    "latitude" : -20.99,
+    "longitude" : -50.48,
+    
+    "remedios" : [{
+        "dataMedicacao" : "21/11/2019",
+        "nomeMedicacao" : ["Brucelose","Raiva"]
+    },
+    {
+        "dataMedicacao" : "21/11/2019",
+        "nomeMedicacao" : ["Brucelose","Raiva"]
+    }],
+    
+    "registroDeAtividades" : [{
+        "dataAcontecimento" : "21/11/2019",
+        "acontecimentos" : ["Bebeu água", "Tomou vacina"]
+    },
+    {
+        "dataAcontecimento" : "22/11/2019",
+        "acontecimentos" : ["Tomou Remédio"]
+    },
+    {
+        "dataAcontecimento" : "23/11/2019",
+        "acontecimentos" : ["Bebeu água", "Trocou de pasto"]
+    }]
+},
+{
+    "id" : "KLM1212",
+    "lote" : "40C",
+    "area" : 4,
+    "tipo" : "Bovino",
+    "raca" : "Nelore",
+    "sexo" : "Macho",
+    "bateria" : 100,
+    "latitude" : -20.92,
+    "longitude" : -50.45,
     
     "remedios" : [{
         "dataMedicacao" : "21/11/2019",

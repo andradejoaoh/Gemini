@@ -84,7 +84,7 @@ class AlertasViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func verificarAnimais(){
         guard let fazenda = fazenda else {return}
-        let distancia: Double = Double(fazenda.raioDaFazenda/1000)
+        let distancia: Double = Double(Double(fazenda.raioDaFazenda)/100000)
         for animal in JSONHandler.shared.animais{
             if animal.bateria <= 10 || animal.latitude > (fazenda.latitude + distancia) || animal.latitude < (fazenda.latitude - distancia) || animal.longitude < (fazenda.longitude - distancia) || animal.longitude > (fazenda.longitude + distancia) {
                 animaisEmAlerta.append(animal)
