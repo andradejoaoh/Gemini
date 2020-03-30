@@ -10,10 +10,10 @@ import Foundation
 import MapKit
 class PinMapa: NSObject, MKAnnotation {
   let id: String?
-  let bateria: String
+  let bateria: Int
   let coordinate: CLLocationCoordinate2D
   
-  init(id: String, bateria: String, coordinate: CLLocationCoordinate2D) {
+  init(id: String, bateria: Int, coordinate: CLLocationCoordinate2D) {
     self.id = id
     self.bateria = bateria
     self.coordinate = coordinate
@@ -21,10 +21,11 @@ class PinMapa: NSObject, MKAnnotation {
   }
   
     var subtitle: String? {
-        return bateria
+        return "Bateria: " + String(bateria) + "%"
     }
     
     var title: String? {
         return id
     }
+
 }

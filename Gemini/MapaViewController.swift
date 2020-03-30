@@ -22,6 +22,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
     var fazenda: Fazenda?
     var latitudeInicial: Double?
     var longitudeInicial: Double?
+    var selectedAnimalID: String?
     
                                /* |---------------|
                                   |FUNÇÕES DA VIEW|
@@ -95,7 +96,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
     func adicionarPins() {
         for animal in animais {
             let animalID = "ID: " + animal.id
-            let animalBateria = "Bateria: " + String(animal.bateria) + "%"
+            let animalBateria = animal.bateria
             let animalCoordenada = CLLocationCoordinate2D(latitude: animal.latitude, longitude: animal.longitude)
             let animalPin = PinMapa(id: animalID, bateria: animalBateria, coordinate: animalCoordenada)
             mapOutlet.addAnnotation(animalPin)
@@ -108,21 +109,56 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
                                                   latitudinalMeters: Double(fazenda.raioDaFazenda/5), longitudinalMeters: Double(fazenda.raioDaFazenda/5))
         mapOutlet.setRegion(coordinateRegion, animated: true)
     }
-    
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard annotation is MKPointAnnotation else { return nil }
-        
-        let identifier = "Annotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        
-        if annotationView == nil {
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView!.canShowCallout = true
-        } else {
-            annotationView!.annotation = annotation
+                
+        var annotationView: MKAnnotationView?
+
+        if let annotation = annotation as? PinMapa {
+            annotationView = setupCowAnnotation(for: annotation, on: mapView)
         }
         return annotationView
     }
+    
+    private func setupCowAnnotation(for annotation: PinMapa, on mapView: MKMapView) -> MKAnnotationView {
+        let identifier = "Annotation"
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView!.canShowCallout = true
+            let rightButton = UIButton(type: .detailDisclosure)
+            annotationView?.rightCalloutAccessoryView = rightButton
+            annotationView?.image = UIImage(named: "goodCowPin")
+            if annotation.bateria <= 20 {
+                annotationView?.image = UIImage(named: "badCowPin")
+            }
+            
+        } else {
+            annotationView!.annotation = annotation
+        }
+        return annotationView!
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        guard var id = view.annotation?.title!! else { return }
+        id.removeFirst(4)
+        selectedAnimalID = id
+        performSegue(withIdentifier: "fromMapToAnimal", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let animalViewController = segue.destination as? AnimalViewController {
+            animalViewController.animal = animais.filter{$0.id == selectedAnimalID }.first
+        }
+        
+    }
+    
+//    func mapView(_ mapView: MKMapView, clusterAnnotationForMemberAnnotations memberAnnotations: [MKAnnotation]) -> MKClusterAnnotation {
+//
+//    }
+//
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
     }
