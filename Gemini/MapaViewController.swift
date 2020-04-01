@@ -138,6 +138,9 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
         } else {
             annotationView!.annotation = annotation
         }
+        if #available(iOS 11.0, *) {
+            annotationView?.clusteringIdentifier = "mapPinCluster"
+        }
         return annotationView!
     }
     
@@ -152,14 +155,6 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
         if let animalViewController = segue.destination as? AnimalViewController {
             animalViewController.animal = animais.filter{$0.id == selectedAnimalID }.first
         }
-        
-    }
-    
-//    func mapView(_ mapView: MKMapView, clusterAnnotationForMemberAnnotations memberAnnotations: [MKAnnotation]) -> MKClusterAnnotation {
-//
-//    }
-//
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
     }
 }
