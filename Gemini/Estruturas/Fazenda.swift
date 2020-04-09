@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import MapKit
+
 class Fazenda: Codable {
     let usuario: String
     let senha: String

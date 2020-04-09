@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		61201CA623D00FFE00448079 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61201CA523D00FFE00448079 /* KeyboardHandler.swift */; };
+		61207A47243FB2E0005DE9A9 /* MapPolygonOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61207A46243FB2E0005DE9A9 /* MapPolygonOverlay.swift */; };
 		614C6D5C23C6BFD900CD559C /* EditarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614C6D5B23C6BFD900CD559C /* EditarViewController.swift */; };
 		615BEC6823904968003668D5 /* AlertasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC6723904968003668D5 /* AlertasViewController.swift */; };
 		615BEC6A2390598C003668D5 /* ConfiguracoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		61201CA523D00FFE00448079 /* KeyboardHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		61207A46243FB2E0005DE9A9 /* MapPolygonOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPolygonOverlay.swift; sourceTree = "<group>"; };
 		614C6D5B23C6BFD900CD559C /* EditarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarViewController.swift; sourceTree = "<group>"; };
 		615BEC6723904968003668D5 /* AlertasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertasViewController.swift; sourceTree = "<group>"; };
 		615BEC692390598C003668D5 /* ConfiguracoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguracoesViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				61682B7223B9CBD0004CCF2B /* AreaCell.swift */,
 				61ECD5E32390C85D00F61C3C /* AtividadesCell.swift */,
 				61EDCF9C2398233600622CAA /* PinMapa.swift */,
+				61207A46243FB2E0005DE9A9 /* MapPolygonOverlay.swift */,
 			);
 			path = Estruturas;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				61682B7323B9CBD0004CCF2B /* AreaCell.swift in Sources */,
 				61B5102D23907396005BCB69 /* JSONHandler.swift in Sources */,
 				614C6D5C23C6BFD900CD559C /* EditarViewController.swift in Sources */,
+				61207A47243FB2E0005DE9A9 /* MapPolygonOverlay.swift in Sources */,
 				61ECD5E42390C85D00F61C3C /* AtividadesCell.swift in Sources */,
 				61EDCF9B2396FCE700622CAA /* Remedio.swift in Sources */,
 				61B5103423907817005BCB69 /* AnimaisViewController.swift in Sources */,

@@ -43,7 +43,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
         mapOutlet.delegate = self
         checkLocationServices()
         adicionarPins()
-
+        createAreas()
     }
     override func viewWillDisappear(_ animated: Bool) {
         UIApplication.shared.statusBarStyle = .lightContent
@@ -99,6 +99,7 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
             let animalBateria = animal.bateria
             let animalCoordenada = CLLocationCoordinate2D(latitude: animal.latitude, longitude: animal.longitude)
             let animalPin = PinMapa(id: animalID, bateria: animalBateria, coordinate: animalCoordenada)
+            annotationPins.append(animalPin)
             mapOutlet.addAnnotation(animalPin)
         }
     }
@@ -144,6 +145,33 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
         return annotationView!
     }
     
+    func createAreas() {
+        let areaCoordinates = [CLLocationCoordinate2D(latitude: -20.981, longitude: -50.472),
+        CLLocationCoordinate2D(latitude: -20.983, longitude: -50.472),
+        CLLocationCoordinate2D(latitude: -20.983, longitude: -50.474),
+        CLLocationCoordinate2D(latitude: -20.981, longitude: -50.474)
+        ]
+        let mapOverlay = MKPolygon(coordinates: areaCoordinates, count: areaCoordinates.count)
+        mapOutlet.addOverlay(mapOverlay)
+        
+        for pin in annotationPins{
+            print(mapOverlay.boundingMapRect.contains(MKMapPoint(pin.coordinate)))
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if let overlay = overlay as? MKPolygon {
+            let overlayRender = MKPolygonRenderer(polygon: overlay)
+            overlayRender.fillColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+            overlayRender.alpha = 0.25
+            return overlayRender
+        }
+        return MKPolygonRenderer()
+    }
+                                 /* |----------------|
+                                    |FUNÇÕES DA SEGUE|
+                                    |----------------| */
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         guard var id = view.annotation?.title!! else { return }
         id.removeFirst(4)
@@ -155,6 +183,6 @@ class MapaViewController: UIViewController, MKMapViewDelegate{
         if let animalViewController = segue.destination as? AnimalViewController {
             animalViewController.animal = animais.filter{$0.id == selectedAnimalID }.first
         }
-        
     }
+    
 }
